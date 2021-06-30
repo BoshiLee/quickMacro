@@ -44,7 +44,7 @@ If intX > 0 And intY > 0 Then
    MoveTo intX + 5, intY + 5
    LeftClick 1
    MoveTo intX, intY - 40
-   Delay (300)
+   Delay (100)
 Else 
     TracePrint "找不到重試"
 End If
@@ -65,11 +65,16 @@ Next
 
 FindPic coordinates(0), coordinates(1), coordinates(2), coordinates(3), "Attachment:\retry.bmp", 0.9, retryX, retryY
 For 2
-	Delay (500)
+	Delay (200)
 	Call clickRetry(retryX, retryY)
 Next
 FindPic coordinates(0), coordinates(1), coordinates(2), coordinates(3), arr(0), 0.9, saltX, saltY
 Wend
+
+KeyPress "/", 1
+KeyPress "0", 1
+KeyPress "Enter", 1
+
 
 
 
